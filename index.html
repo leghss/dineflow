@@ -1,128 +1,186 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DINE FLOW</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-    body {
-      margin: 0;
-      background-color: #000;
-      color: white;
-      font-family: 'Inter', sans-serif;
-      text-align: center;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DINE FLOW</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+  
+  body {
+    margin: 0;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  nav {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+  }
+  nav a {
+    color: white;
+    margin: 0 25px;
+    text-decoration: none;
+  }
+
+  h1.dine {
+    font-weight: 900;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #B0B0B0; /* Grau-Weiß */
+    background: linear-gradient(90deg, #a6a6a6 0%, #ebebeb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  img.flow-logo {
+    width: 280px;
+    margin-bottom: 30px;
+  }
+
+  .ai-title {
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: white;
+  }
+
+  .ai-subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: #C0C0C0;
+  }
+
+  .boxes {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 60px;
+  }
+
+  .box {
+    border: 1.5px solid #D08A11;
+    border-radius: 8px;
+    padding: 22px 28px;
+    max-width: 190px;
+    text-align: center;
+  }
+
+  .box .percent {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 6px;
+    color: white;
+  }
+
+  .box .title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: white;
+  }
+
+  .box .subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #C0C0C0;
+  }
+
+  .bottom-text-strong {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .bottom-text {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .bottom-text-strong.reservation {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+  .bottom-text.reservation-desc {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .icon {
+    width: 140px;
+    height: auto;
+    margin: 40px auto 80px auto;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
     nav {
-      margin-top: 20px;
-      margin-bottom: 50px;
-      font-weight: 700;
       font-size: 14px;
-      letter-spacing: 0.05em;
-    }
-    nav a {
-      color: white;
-      margin: 0 25px;
-      text-decoration: none;
+      margin-bottom: 40px;
     }
     h1.dine {
-      font-weight: 700;
-      font-size: 36px;
+      font-size: 32px;
       margin-bottom: 10px;
-      color: #B0B0B0; /* Grau-Weiß */
     }
-    .flow-img {
-      width: 280px;
+    img.flow-logo {
+      width: 140px;
       margin-bottom: 30px;
     }
     .ai-title {
-      font-weight: 400;
       font-size: 18px;
+      margin-top: 20px;
       margin-bottom: 4px;
-      color: white;
     }
     .ai-subtitle {
-      font-weight: 400;
-      font-size: 14px;
-      margin-bottom: 50px;
-      color: #C0C0C0;
+      font-size: 12px;
+      margin-bottom: 35px;
     }
     .boxes {
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-      margin-bottom: 60px;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 40px;
     }
     .box {
-      border: 1.5px solid #D08A11;
-      border-radius: 8px;
-      padding: 22px 28px;
-      max-width: 190px;
-      text-align: center;
+      max-width: 90vw;
+      padding: 18px 20px;
     }
     .box .percent {
-      font-weight: 700;
       font-size: 22px;
-      line-height: 1.1;
-      margin-bottom: 6px;
     }
     .box .title {
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 1.1;
-      margin-bottom: 8px;
+      font-size: 16px;
     }
     .box .subtitle {
-      font-weight: 400;
       font-size: 14px;
-      line-height: 1.2;
-      color: #C0C0C0;
     }
     .bottom-text-strong {
-      font-weight: 700;
       font-size: 14px;
       margin-bottom: 10px;
     }
     .bottom-text {
-      font-weight: 400;
-      font-size: 13px;
-      margin-bottom: 60px;
+      font-size: 14px;
+      margin-bottom: 30px;
     }
     .icon {
-      width: 120px;
-      height: auto;
-      margin: 40px auto;
-      display: block;
+      width: 100px;
+      margin: 30px auto 50px auto;
     }
-    /* Responsive */
-    @media (max-width: 600px) {
-      .flow-img {
-        width: 140px;
-      }
-      .boxes {
-        flex-direction: column;
-        gap: 20px;
-        margin-bottom: 40px;
-      }
-      .box {
-        max-width: 90vw;
-        padding: 18px 20px;
-      }
-      .box .percent {
-        font-size: 20px;
-      }
-      .box .title {
-        font-size: 16px;
-      }
-      .box .subtitle {
-        font-size: 13px;
-      }
-      .icon {
-        width: 80px;
-        margin: 30px auto;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <nav>
@@ -132,7 +190,7 @@
   </nav>
 
   <h1 class="dine">DINE</h1>
-  <img src="FLOW.png" alt="FLOW Logo" class="flow-img" />
+  <img src="FLOW.png" alt="FLOW Logo" class="flow-logo" />
 
   <div class="ai-title">AI-powered Reservations – Directly in Instagram</div>
   <div class="ai-subtitle">Automate your table bookings with the power of AI.</div>
@@ -155,35 +213,23 @@
     </div>
   </div>
 
-  <div style="margin-bottom: 40px;">
+  <p class="bottom-text">
     Starte jetzt mit <strong>DINE FLOW</strong> und automatisiere deine Reservierungen direkt auf Instagram.
-  </div>
+  </p>
 
-  <div class="bottom-text-strong">
-    Reservierungsanfrage<br />
-    via Instagram
-  </div>
-  <div class="bottom-text">
-    Reservierung über Direktnachricht anfragen
-  </div>
+  <p class="bottom-text-strong reservation">Reservierungsanfrage</p>
+  <p class="bottom-text reservation-desc">via Instagram</p>
+  <p class="bottom-text">Reservierung über Direktnachricht anfragen</p>
 
   <img src="ChatGPTInsta.png" alt="Instagram Icon" class="icon" />
 
-  <div class="bottom-text-strong">
-    AI verarbeitet & prüft Verfügbarkeit
-  </div>
-  <div class="bottom-text">
-    Automatische Verarbeitung der Anfrage und Abstimmung mit freien Zeiten
-  </div>
+  <p class="bottom-text-strong">AI verarbeitet & prüft Verfügbarkeit</p>
+  <p class="bottom-text">Automatische Verarbeitung der Anfrage und Abstimmung mit freien Zeiten</p>
 
   <img src="ChatGPTDreieck.png" alt="AI Icon" class="icon" />
 
-  <div class="bottom-text-strong">
-    Bestätigung oder Alternativen
-  </div>
-  <div class="bottom-text">
-    Automatisch versendet
-  </div>
+  <p class="bottom-text-strong">Bestätigung oder Alternativen</p>
+  <p class="bottom-text">Automatisch versendet</p>
 
   <img src="ChatGPTMail.png" alt="Mail Icon" class="icon" />
 </body>
