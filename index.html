@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DINE FLOW</title>
+<style>
+  /* Grundstyles */
+  body {
+    margin: 0;
+    background: #0B0B0B;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Farbverlauf für DINE (grau-weiß) */
+  h1.dine-gradient {
+    font-size: 48px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #b0b0b0 0%, #f0f0f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 12px 0;
+  }
+
+  /* FLOW-Logo größer */
+  img.flow-logo {
+    width: 320px;
+    max-width: 90vw;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  /* Untertitel */
+  .subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+
+  /* Boxen Container */
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  /* Boxen Style */
+  .feature-box {
+    border: 1px solid orange;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    width: 180px;
+    background: #121212;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Highlight (Zahlen/Worte) fett und groß, wie PDF */
+  .feature-box .highlight {
+    font-weight: 900;
+    font-size: 26px;
+    margin-bottom: 8px;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Beschreibungstext kleiner, normal */
+  .feature-box .desc {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-top: 0;
+  }
+
+  /* Sektionen */
+  .section {
+    margin: 2rem 1rem;
+  }
+
+  /* Icons größer */
+  img.icon {
+    width: 120px;
+    height: 120px;
+    margin: 1rem auto;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 600px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .feature-box {
+      width: 70%; /* Maximal 70% Breite auf Mobile */
+      margin-bottom: 1.5rem;
+    }
+    h1.dine-gradient {
+      font-size: 36px;
+    }
+    img.flow-logo {
+      width: 90vw;
+      max-width: 250px;
+      margin-bottom: 1rem;
+    }
+    .subtitle {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    nav {
+      gap: 1.5rem;
+      font-size: 14px;
+    }
+    img.icon {
+      width: 90px;
+      height: 90px;
+      margin: 1rem auto;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Implemented By</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <h1 class="dine-gradient">DINE</h1>
+  <img src="images/FLOW.png" alt="FLOW Logo" class="flow-logo" />
+
+  <div class="subtitle">
+    AI-powered Reservations – Directly in Instagram<br />
+    Automate your table bookings with the power of AI
+  </div>
+
+  <div class="features">
+    <div class="feature-box">
+      <span class="highlight">100 %</span>
+      <p class="desc">Aufwand reduzieren<br />Automatisch</p>
+    </div>
+    <div class="feature-box">
+      <span class="highlight">Open Table</span>
+      <p class="desc">Integration<br />Tische digital buchen</p>
+    </div>
+    <div class="feature-box">
+      <span class="highlight">50 %</span>
+      <p class="desc">Schwellenangst verringern<br />Per Plugin</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p>Starte jetzt mit <strong>DINE FLOW</strong> und automatisiere deine Reservierungen direkt auf Instagram.</p>
+    <p><strong>Reservierungsanfrage via Instagram</strong><br />Reservierung über Direktnachricht anfragen</p>
+    <img src="images/ChatGPTInsta.png" alt="Instagram Icon" class="icon" />
+  </div>
+
+  <div class="section">
+    <p><strong>AI verarbeitet & prüft Verfügbarkeit</strong><br />Automatische Verarbeitung der Anfrage und Abstimmung mit freien Zeiten</p>
+    <img src="images/ChatGPTDreieck.png" alt="AI Icon" class="icon" />
+  </div>
+
+  <div class="section">
+    <p><strong>Bestätigung oder Alternativen</strong><br />Automatisch versendet</p>
+    <img src="images/ChatGPTMail.png" alt="Mail Icon" class="icon" />
+  </div>
+
+</body>
+</html>
